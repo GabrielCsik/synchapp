@@ -2,9 +2,8 @@ package com.example.application.views;
 
 
 import com.example.application.views.about.AboutView;
-import com.example.application.views.dashboard.DashboardView;
-import com.example.application.views.helloworld.HelloWorldView;
-import com.example.application.views.masterdetail.MasterDetailView;
+import com.example.application.views.inputparams.InputParameters;
+import com.example.application.views.masterdetail.TestResultView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -89,7 +88,7 @@ public class MainLayout extends AppLayout {
     }
 
     private Component createDrawerContent() {
-        H2 appName = new H2("diplomovka1");
+        H2 appName = new H2("Masters thesis");
         appName.addClassNames("app-name");
 
         com.vaadin.flow.component.html.Section section = new com.vaadin.flow.component.html.Section(appName,
@@ -117,11 +116,11 @@ public class MainLayout extends AppLayout {
 
     private MenuItemInfo[] createMenuItems() {
         return new MenuItemInfo[]{ //
-                new MenuItemInfo("Hello World", "la la-globe", HelloWorldView.class), //
+                new MenuItemInfo("Input Parameters", "la la-globe", InputParameters.class), //
 
-                new MenuItemInfo("Dashboard", "la la-chart-area", DashboardView.class), //
+                
 
-                new MenuItemInfo("Master-Detail", "la la-columns", MasterDetailView.class), //
+                new MenuItemInfo("Test Results", "la la-columns", TestResultView.class), //
 
                 new MenuItemInfo("About", "la la-file", AboutView.class), //
 
